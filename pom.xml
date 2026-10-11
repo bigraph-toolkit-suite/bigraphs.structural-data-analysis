@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bigraphs.model.analysis</groupId>
+    <artifactId>structural-data-analysis</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>
+        A Java library of kernels and topological data analysis (TDA) techniques for bigraphs and bigraphical reactive
+        systems.
+    </description>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <comments/>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>dgrzelak</id>
+            <name>Dominik Grzelak</name>
+            <email>dominik.grzelak@tu-dresden.de</email>
+            <organization>Technische Universität Dresden</organization>
+            <organizationUrl>https://tu-dresden.de/ing/informatik/smt/st</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/bigraph-toolkit-suite/bigraphs.structural-data-analysis.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/bigraph-toolkit-suite/bigraphs.structural-data-analysis.git</developerConnection>
+        <url>https://github.com/bigraph-toolkit-suite/bigraphs.structural-data-analysis</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>central</id>
+            <url>https://central.sonatype.com</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+        <!-- General -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Versions -->
+        <bigraph.version>2.4.4</bigraph.version>
+        <bigraph.testing.version>0.2.0</bigraph.testing.version>
+        <bigraph.model-provider.version>1.2.2</bigraph.model-provider.version>
+        <guava.version>33.7.2-jre</guava.version>
+        <ejml.version>0.46.1</ejml.version>
+        <jgrapht.version>1.5.3</jgrapht.version>
+        <graphstream.version>2.0</graphstream.version>
+        <commons-math3.version>3.6.1</commons-math3.version>
+        <jfreechart.version>1.5.4</jfreechart.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>true</enabled> <!-- set false to disable snapshot releases -->
+            </snapshots>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- the core module -->
+        <dependency>
+            <groupId>org.bigraphs.framework</groupId>
+            <artifactId>bigraph-core</artifactId>
+            <version>${bigraph.version}</version>
+        </dependency>
+        <!-- the simulation module -->
+        <dependency>
+            <groupId>org.bigraphs.framework</groupId>
+            <artifactId>bigraph-simulation</artifactId>
+            <version>${bigraph.version}</version>
+        </dependency>
+        <!-- the visualization module -->
+        <dependency>
+            <groupId>org.bigraphs.framework</groupId>
+            <artifactId>bigraph-visualization</artifactId>
+            <version>${bigraph.version}</version>
+        </dependency>
+        <!-- the converter module -->
+        <dependency>
+            <groupId>org.bigraphs.framework</groupId>
+            <artifactId>bigraph-converter</artifactId>
+            <version>${bigraph.version}</version>
+        </dependency>
+        <!-- Bigraph Model Provider -->
+        <dependency>
+            <groupId>org.bigraphs.model.provider</groupId>
+            <artifactId>model-provider-core</artifactId>
+            <version>${bigraph.model-provider.version}</version>
+        </dependency>
+        <!-- Graphs and Collections -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-core</artifactId>
+            <version>${jgrapht.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-ext</artifactId>
+            <version>${jgrapht.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-io</artifactId>
+            <version>${jgrapht.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-core</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-ui-swing</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-algo</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <!-- Math (Linear Algebra) -->
+        <dependency>
+            <groupId>org.ejml</groupId>
+            <artifactId>ejml-all</artifactId>
+            <version>${ejml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>${commons-math3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>${jfreechart.version}</version>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>2.0.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Test -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bigraphs.testing</groupId>
+            <artifactId>bigraphs-testing</artifactId>
+            <version>${bigraph.testing.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <java>
+                        <includes>
+                            <include>src/main/java/**/*.java</include>
+                            <include>src/test/java/**/*.java</include>
+                        </includes>
+                        <importOrder/>
+                        <removeUnusedImports/>
+                        <licenseHeader>
+                            <file>${project.basedir}/license-header</file>
+                        </licenseHeader>
+                    </java>
+                    <setLicenseHeaderYearsFromGitHistory>false</setLicenseHeaderYearsFromGitHistory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>compile</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
