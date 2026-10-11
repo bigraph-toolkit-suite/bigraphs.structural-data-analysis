@@ -17,9 +17,7 @@ package org.bigraphs.analysis.tda.wl;
 import static org.bigraphs.framework.core.utils.BigraphUtil.getUniqueLabelOfBigraphEntity;
 
 import com.google.common.collect.Multiset;
-
 import java.util.*;
-
 import org.apache.commons.lang3.tuple.Pair;
 import org.bigraphs.analysis.tda.wl.impl.LinkGraphWLColorRefinementImpl;
 import org.bigraphs.analysis.tda.wl.impl.PlaceGraphWLColorRefinementImpl;

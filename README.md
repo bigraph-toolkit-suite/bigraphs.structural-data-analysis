@@ -115,7 +115,7 @@ boolean bigraphsAreIsomorphic = checker.isoCheck();
 
 ## License
 
-This project is licensed under the **Apache License, Version 2.0**. See the `LICENSE` file for the full license text.
+This project is licensed under the *Apache License, Version 2.0*. See the `LICENSE` file for the full license text.
 
 ## References
 

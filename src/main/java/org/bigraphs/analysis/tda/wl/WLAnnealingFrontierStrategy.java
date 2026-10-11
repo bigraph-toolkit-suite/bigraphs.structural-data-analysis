@@ -17,7 +17,6 @@ package org.bigraphs.analysis.tda.wl;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-
 import org.bigraphs.framework.core.impl.pure.PureBigraph;
 import org.bigraphs.framework.simulation.modelchecking.BigraphFilter;
 import org.bigraphs.framework.simulation.modelchecking.SimulatedAnnealingFrontierStrategy;

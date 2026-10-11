@@ -15,7 +15,6 @@
 package org.bigraphs.analysis.tda.wl.impl;
 
 import java.util.*;
-
 import org.bigraphs.analysis.tda.wl.AbstractWLColorRefinementProcedure;
 import org.bigraphs.framework.core.BigraphEntityType;
 import org.bigraphs.framework.core.impl.BigraphEntity;
